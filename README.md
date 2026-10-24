@@ -35,7 +35,7 @@ Each solution will include the question, SQL query, explanation, and any importa
 
 ## Progress
 
-- [ ] Questions 1–10
+- [Done] Questions 1–10
 - [ ] Questions 11–20
 - [ ] Questions 21–30
 - [ ] Questions 31–40
