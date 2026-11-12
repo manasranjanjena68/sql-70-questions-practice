@@ -1,4 +1,4 @@
-
+ 
 -- =====================================================
 -- SQL Practice: Hospital Database
 -- Questions 41–50
