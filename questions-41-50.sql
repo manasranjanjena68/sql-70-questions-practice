@@ -134,3 +134,70 @@ FROM patients AS p
 JOIN admissions AS a
     ON p.patient_id = a.patient_id
 WHERE a.patient_id IS NOT NULL;
+
+
+-- =========================================
+-- QTN - 48
+-- Each admission costs $50 for patients without insurance,
+-- and $10 for patients with insurance.
+-- All patients with an even patient_id have insurance.
+--
+-- Give each patient a 'Yes' if they have insurance,
+-- and a 'No' if they don't have insurance.
+-- Add up the admission_total cost for each has_insurance group.
+
+SELECT
+    (
+        CASE
+            WHEN patient_id % 2 = 0 THEN 'Yes'
+            ELSE 'No'
+        END
+    ) AS has_insurance,
+
+    SUM(
+        CASE
+            WHEN patient_id % 2 = 0 THEN 10
+            ELSE 50
+        END
+    ) AS cost_after_insurance
+
+FROM admissions
+GROUP BY has_insurance;
+
+
+-- =========================================
+-- QTN - 49
+-- Show the provinces that have more patients identified
+-- as 'M' than 'F'.
+-- Must only show full province_name.
+
+SELECT
+    pn.province_name
+FROM patients AS p
+JOIN province_names AS pn
+    ON p.province_id = pn.province_id
+GROUP BY province_name
+HAVING
+    COUNT(CASE WHEN p.gender = 'M' THEN 1 END) >
+    COUNT(CASE WHEN p.gender = 'F' THEN 1 END);
+
+
+-- =========================================
+-- QTN - 50
+-- We are looking for a specific patient.
+-- Pull all columns for the patient who matches the following criteria:
+-- 1. First_name contains an 'r' after the first two letters.
+-- 2. Identifies their gender as 'F'.
+-- 3. Born in February, May, or December.
+-- 4. Their weight would be between 60kg and 80kg.
+-- 5. Their patient_id is an odd number.
+-- 6. They are from the city 'Kingston'.
+
+SELECT *
+FROM patients
+WHERE (first_name LIKE '__r%')
+    AND (gender = 'F')
+    AND (MONTH(birth_date) IN (02, 05, 12))
+    AND (weight BETWEEN 60 AND 80)
+    AND (patient_id % 2 != 0)
+    AND (city = 'Kingston');
