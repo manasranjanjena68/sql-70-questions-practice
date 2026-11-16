@@ -35,13 +35,13 @@ Each solution will include the question, SQL query, explanation, and any importa
 
 ## Progress
 
-- [Done] Questions 1–10
-- [ ] Questions 11–20
-- [ ] Questions 21–30
-- [ ] Questions 31–40
-- [ ] Questions 41–50
-- [ ] Questions 51–60
-- [ ] Questions 61–70
+- ✅ Questions 1–10
+- ✅ Questions 11–20
+- ✅ Questions 21–30
+- ✅ Questions 31–40
+- ✅ Questions 41–50
+- ⬜ Questions 51–60
+- ⬜ Questions 61–70
 
 ## My Learning Approach
 
