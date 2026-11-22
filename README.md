@@ -99,7 +99,7 @@ sql-70-questions-practice/
 | Questions 55–60 | Northwind | ✅ Upcoming |
 | Questions 61–70 | Northwind | ✅ Upcoming |
 
-**Current Progress: 54 / 70 Questions**
+**Current Progress: 70 / 70 Questions**
 
 ## My Learning Approach
 
