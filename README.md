@@ -96,8 +96,8 @@ sql-70-questions-practice/
 | Questions 31–40 | Hospital | ✅ Completed |
 | Questions 41–50 | Hospital | ✅ Completed |
 | Questions 51–54 | Hospital | ✅ Completed |
-| Questions 55–60 | Northwind | ⬜ Upcoming |
-| Questions 61–70 | Northwind | ⬜ Upcoming |
+| Questions 55–60 | Northwind | ✅ Upcoming |
+| Questions 61–70 | Northwind | ✅ Upcoming |
 
 **Current Progress: 54 / 70 Questions**
 
